@@ -1,9 +1,9 @@
 function compute()
 {
     p = document.getElementById("principal").value;
-    var principal = document.getElementById("principal").value;
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
+    var degree = document.getElementById("degree").value;
+    var wind = document.getElementById("wind").value;
+    var rain = document.getElementById("rain").value;
     var interest = principal * years * rate /100;
     var year = new Date().getFullYear()+parseInt(years);
     document.getElementById("result").innerHTML=
@@ -19,20 +19,20 @@ function compute()
 function updateRate() 
 {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval+"%";
+    document.getElementById("rate_val").innerText=rateval+"km/h";
 }
 
 
 function checkdata()
 {
     var principal = document.getElementById("principal");
-    if(principal.value<=0){ 
-        alert("Enter a postive number") 
+    if(principal.value<=-100){ 
+        alert("You are freezing to death, seek shelter") 
         principal.focus();
         return false;
     }
     if(principal.value==""){ 
-        alert("Enter a postive number") 
+        alert("Without temperatur, no recommendation") 
         principal.focus();
         return false;
     }

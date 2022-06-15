@@ -10,19 +10,19 @@
         <div class="maindiv">        
             <h1>What to wear today?</h1>
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Weather_icon_-_sun_rain.svg" width="300" height="300"> </br>
-            Degrees <input type="number"  id="principal"onchange="return checkdata()">  <br/>
-            Wind km/h <input type="range" onchange="updateRate()" id="rate" min=0 max=120 value=10 step=5>  
+            Degrees <input type="number"  id="degree"onchange="return checkdata()">  <br/>
+            Wind km/h <input type="range" onchange="updateRate()" id="wind" min=0 max=120 value=10 step=5>  
             
             <span id="rate_val" >
-                10.25%
+                10 km/h
             </span>
             <br/>
             Rain
             <select id="rain">
-                <option value="no">"no"</option>
-                <option value="few">"few"</option>
-                <option value="medium">"medium"</option>
-                <option value="much">"much"</option>
+                <option value="no">no</option>
+                <option value="few">few</option>
+                <option value="medium">medium</option>
+                <option value="much">much</option>
 
             </select> <br/>
             <br/> 

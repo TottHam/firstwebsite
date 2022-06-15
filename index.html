@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html> <!-- all html files begin and end witch this tag -->
-    <head> <!--  defines the metadata about the page, which is used by browsers and search engines-->
-        <title>Thomas J. Watson Sr -  Fan Page</title> <!--title of the page appears on the browser tab, when you open it in the browser. -->
-        
+<html>
+    <head>
+        <title> Web App – Simple Interest Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     </head>
-    <body> <!--efines the document body, and contains all the visible contents like headings, paragraphs, images, links, tables etc -->
-        <h1> Thomas J. Watson </h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Thomas_J_Watson_Sr.jpg" width="300" height="300"> <!--The 'src' attribute specifies an external resource that you want to link, such as the URL of an image.
-            You can optionally specify how many pixels the width and height of the image should be.-->
-        <p>
-            Thomas J. Watson, Sr. is the American industrialist, who built the International Business Machines Corporation 
-            (<a href="https://www.ibm.com">IBM </a>) <!--Link-->
-            into the largest manufacturer of electric typewriters and data-processing equipment in the world. 
-        </p>  <!--paragraph-->
-        <ul> <!--we can use the <ol> tag for numbered lists, and <ul> for bulleted lists-->
-            <li>In 1939, he received an honorary degree in Doctor of Commercial Science from Oglethorpe University. </li>
-            <li>In 1940s, Watson was on the national executive board of the Boy Scouts of America. </l>
-            <li>Watson served as a trustee of Columbia University from June 6, 1933, until his death. </li>
-            <li>He was posthumously inducted into the Junior Achievement U.S. Business Hall of Fame in 1990.</li>
-        </ul>
-        <h1>IBM Growth Over Years: </h1>
-    <table>
-        <tr> <!--for each row-->
-            <th>Year </th><!--headings ("first" line)-->
-            <th>No. of Employees </th>
-            <th>Gross Income (In m$) </th>
-        </tr>
-        <tr>
-            <td>1925</td> <!--each data element-->
-            <td>3698</td>
-            <td>13</td>
-        </tr>
-        <tr>
-            <td>1930</td>
-            <td>6346</td>
-            <td>19 </td>
-        </tr>
-        <tr>
-            <td>1935</td>
-            <td>8651</td>
-            <td>21</td>
-        </tr>
+    <body>
+        
+        <div class="maindiv">        
+            <h1>Simple Interest Calculator</h1>
+            Amount <input type="number"  id="principal"onchange="return checkdata()">  <br/>
+            Rate <input type="range" onchange="updateRate()" id="rate" min=1 max=20 value=10.25 step=0.25>  
+            <span id="rate_val" >
+                10.25%
+            </span>
+            <br/>
+            No. of Years
+            <select id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select> <br/>
+            <br/> 
+            <button onclick="checkdata();compute()">Compute Interest</button> </br>
+            <span id="result">
+            </span>
+            </br>
+            </br>
+            <footer>
 
-    </table>
+                &#169; This Calculator belongs to Tim Ottensmann
+        
+        
+            </footer>
+        </div>
+
     </body>
-
 </html>
